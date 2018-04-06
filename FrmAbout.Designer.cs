@@ -44,7 +44,7 @@
             this.TxtBoxAbout.Size = new System.Drawing.Size(450, 79);
             this.TxtBoxAbout.TabIndex = 0;
             this.TxtBoxAbout.Text = "该车辆型号数据库由SWJTU的铁路爱好者收集，数据仅供参考。\n蒸汽，燃气轮机车：张目华\n内燃机车：耿昊然\n电力机车：耿昊然\n动车（包括普通和第六次大提速后的）：苏" +
-    "启明\n客车：苏启明\n货车：吴承睿\n工程车，检测车类：苏启明\n城市轨道交通，市域动车组：吴承睿\n程序版本:0.1c";
+    "启明\n客车：苏启明\n货车：吴承睿\n工程车，检测车类：苏启明\n城市轨道交通，市域动车组：吴承睿\n程序版本：0.1c";
             // 
             // ButtLogin
             // 

@@ -1,6 +1,6 @@
 namespace RailwayDatabaseClient
 {
-    partial class FrmReg
+    partial class FrmModify
     {
         /// <summary>
         /// Required designer variable.
@@ -28,22 +28,22 @@ namespace RailwayDatabaseClient
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmReg));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmModify));
             this.LabelReg = new System.Windows.Forms.Label();
+            this.PicBoxReg = new System.Windows.Forms.PictureBox();
             this.LabelUserName = new System.Windows.Forms.Label();
             this.TxtBoxUserName = new System.Windows.Forms.TextBox();
             this.TxtboxPassword = new System.Windows.Forms.TextBox();
             this.LabelPassWord = new System.Windows.Forms.Label();
+            this.ButtReg = new System.Windows.Forms.Button();
             this.ButtCancel = new System.Windows.Forms.Button();
             this.PanelMain = new System.Windows.Forms.Panel();
             this.TxtboxRePass = new System.Windows.Forms.TextBox();
             this.LabelRePass = new System.Windows.Forms.Label();
             this.TxtboxEmail = new System.Windows.Forms.TextBox();
             this.LabelEmail = new System.Windows.Forms.Label();
-            this.ButtReg = new System.Windows.Forms.Button();
-            this.PicBoxReg = new System.Windows.Forms.PictureBox();
-            this.PanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxReg)).BeginInit();
+            this.PanelMain.SuspendLayout();
             this.SuspendLayout();
             // 
             // LabelReg
@@ -52,10 +52,21 @@ namespace RailwayDatabaseClient
             this.LabelReg.ForeColor = System.Drawing.Color.White;
             this.LabelReg.Location = new System.Drawing.Point(33, 9);
             this.LabelReg.Name = "LabelReg";
-            this.LabelReg.Size = new System.Drawing.Size(37, 24);
+            this.LabelReg.Size = new System.Drawing.Size(73, 24);
             this.LabelReg.TabIndex = 11;
-            this.LabelReg.Text = "◊¢≤·";
+            this.LabelReg.Text = "–ﬁ∏ƒ√‹¬Î";
             this.LabelReg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // PicBoxReg
+            // 
+            this.PicBoxReg.BackColor = System.Drawing.Color.Transparent;
+            this.PicBoxReg.Image = global::RailwayDatabaseClient.Properties.Resources.Login_1;
+            this.PicBoxReg.Location = new System.Drawing.Point(8, 9);
+            this.PicBoxReg.Name = "PicBoxReg";
+            this.PicBoxReg.Size = new System.Drawing.Size(24, 24);
+            this.PicBoxReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicBoxReg.TabIndex = 10;
+            this.PicBoxReg.TabStop = false;
             // 
             // LabelUserName
             // 
@@ -93,8 +104,20 @@ namespace RailwayDatabaseClient
             this.LabelPassWord.Name = "LabelPassWord";
             this.LabelPassWord.Size = new System.Drawing.Size(73, 24);
             this.LabelPassWord.TabIndex = 14;
-            this.LabelPassWord.Text = "√‹¬Î";
+            this.LabelPassWord.Text = "‘≠√‹¬Î";
             this.LabelPassWord.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ButtReg
+            // 
+            this.ButtReg.Font = new System.Drawing.Font("Œ¢»Ì—≈∫⁄", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ButtReg.Image = global::RailwayDatabaseClient.Properties.Resources.Login;
+            this.ButtReg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ButtReg.Location = new System.Drawing.Point(33, 336);
+            this.ButtReg.Name = "ButtReg";
+            this.ButtReg.Size = new System.Drawing.Size(122, 27);
+            this.ButtReg.TabIndex = 16;
+            this.ButtReg.Text = "–ﬁ∏ƒ";
+            this.ButtReg.UseVisualStyleBackColor = true;
             // 
             // ButtCancel
             // 
@@ -135,7 +158,7 @@ namespace RailwayDatabaseClient
             this.LabelRePass.Name = "LabelRePass";
             this.LabelRePass.Size = new System.Drawing.Size(73, 24);
             this.LabelRePass.TabIndex = 19;
-            this.LabelRePass.Text = "÷ÿ∏¥√‹¬Î";
+            this.LabelRePass.Text = "–¬√‹¬Î";
             this.LabelRePass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // TxtboxEmail
@@ -145,6 +168,7 @@ namespace RailwayDatabaseClient
             this.TxtboxEmail.Name = "TxtboxEmail";
             this.TxtboxEmail.Size = new System.Drawing.Size(249, 26);
             this.TxtboxEmail.TabIndex = 22;
+            this.TxtboxEmail.UseSystemPasswordChar = true;
             // 
             // LabelEmail
             // 
@@ -154,33 +178,10 @@ namespace RailwayDatabaseClient
             this.LabelEmail.Name = "LabelEmail";
             this.LabelEmail.Size = new System.Drawing.Size(73, 24);
             this.LabelEmail.TabIndex = 21;
-            this.LabelEmail.Text = "” œ‰";
+            this.LabelEmail.Text = "÷ÿ∏¥√‹¬Î";
             this.LabelEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ButtReg
-            // 
-            this.ButtReg.Font = new System.Drawing.Font("Œ¢»Ì—≈∫⁄", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ButtReg.Image = global::RailwayDatabaseClient.Properties.Resources.Login;
-            this.ButtReg.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtReg.Location = new System.Drawing.Point(33, 336);
-            this.ButtReg.Name = "ButtReg";
-            this.ButtReg.Size = new System.Drawing.Size(122, 27);
-            this.ButtReg.TabIndex = 16;
-            this.ButtReg.Text = "◊¢≤·";
-            this.ButtReg.UseVisualStyleBackColor = true;
-            // 
-            // PicBoxReg
-            // 
-            this.PicBoxReg.BackColor = System.Drawing.Color.Transparent;
-            this.PicBoxReg.Image = global::RailwayDatabaseClient.Properties.Resources.Login_1;
-            this.PicBoxReg.Location = new System.Drawing.Point(8, 9);
-            this.PicBoxReg.Name = "PicBoxReg";
-            this.PicBoxReg.Size = new System.Drawing.Size(24, 24);
-            this.PicBoxReg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.PicBoxReg.TabIndex = 10;
-            this.PicBoxReg.TabStop = false;
-            // 
-            // FrmReg
+            // FrmModify
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -201,12 +202,12 @@ namespace RailwayDatabaseClient
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "FrmReg";
+            this.Name = "FrmModify";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "◊¢≤·";
-            this.Load += new System.EventHandler(this.FrmReg_Load);
-            this.PanelMain.ResumeLayout(false);
+            this.Text = "–ﬁ∏ƒ√‹¬Î";
+            this.Load += new System.EventHandler(this.FrmModify_Load);
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxReg)).EndInit();
+            this.PanelMain.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

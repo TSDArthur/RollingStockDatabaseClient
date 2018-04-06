@@ -144,6 +144,7 @@
             this.删除项ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.修改密码ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainStrip.SuspendLayout();
             this.MenuMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
@@ -803,7 +804,7 @@
             this.ButtSave.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtSave.Image = global::RailwayDatabaseClient.Properties.Resources.Save;
             this.ButtSave.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtSave.Location = new System.Drawing.Point(944, 3);
+            this.ButtSave.Location = new System.Drawing.Point(875, 3);
             this.ButtSave.Name = "ButtSave";
             this.ButtSave.Size = new System.Drawing.Size(70, 27);
             this.ButtSave.TabIndex = 17;
@@ -816,7 +817,7 @@
             this.ButtEdit.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtEdit.Image = global::RailwayDatabaseClient.Properties.Resources.Edit_Sub;
             this.ButtEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtEdit.Location = new System.Drawing.Point(876, 3);
+            this.ButtEdit.Location = new System.Drawing.Point(807, 3);
             this.ButtEdit.Name = "ButtEdit";
             this.ButtEdit.Size = new System.Drawing.Size(70, 27);
             this.ButtEdit.TabIndex = 16;
@@ -829,7 +830,7 @@
             this.ButtAdd.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ButtAdd.Image = global::RailwayDatabaseClient.Properties.Resources.File;
             this.ButtAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ButtAdd.Location = new System.Drawing.Point(808, 3);
+            this.ButtAdd.Location = new System.Drawing.Point(283, 3);
             this.ButtAdd.Name = "ButtAdd";
             this.ButtAdd.Size = new System.Drawing.Size(70, 27);
             this.ButtAdd.TabIndex = 15;
@@ -989,6 +990,7 @@
             this.StripButtLogin.Name = "StripButtLogin";
             this.StripButtLogin.Size = new System.Drawing.Size(23, 22);
             this.StripButtLogin.Text = "toolStripButton1";
+            this.StripButtLogin.Click += new System.EventHandler(this.StripButtLogin_Click);
             // 
             // StripButtLogout
             // 
@@ -998,6 +1000,7 @@
             this.StripButtLogout.Name = "StripButtLogout";
             this.StripButtLogout.Size = new System.Drawing.Size(23, 22);
             this.StripButtLogout.Text = "toolStripButton4";
+            this.StripButtLogout.Click += new System.EventHandler(this.StripButtLogout_Click);
             // 
             // StripButtNewUser
             // 
@@ -1007,6 +1010,7 @@
             this.StripButtNewUser.Name = "StripButtNewUser";
             this.StripButtNewUser.Size = new System.Drawing.Size(23, 22);
             this.StripButtNewUser.Text = "toolStripButton2";
+            this.StripButtNewUser.Click += new System.EventHandler(this.StripButtNewUser_Click);
             // 
             // StripButtOpen
             // 
@@ -1141,20 +1145,22 @@
             // 
             this.用户ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.登录ToolStripMenuItem,
+            this.修改密码ToolStripMenuItem,
             this.登出ToolStripMenuItem,
             this.toolStripMenuItem2,
             this.注册ToolStripMenuItem});
             this.用户ToolStripMenuItem.Name = "用户ToolStripMenuItem";
             this.用户ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.U)));
-            this.用户ToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.用户ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.用户ToolStripMenuItem.Text = "用户";
             // 
             // 登录ToolStripMenuItem
             // 
             this.登录ToolStripMenuItem.Name = "登录ToolStripMenuItem";
             this.登录ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.L)));
-            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.登录ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.登录ToolStripMenuItem.Text = "登录";
+            this.登录ToolStripMenuItem.Click += new System.EventHandler(this.登录ToolStripMenuItem_Click);
             // 
             // 登出ToolStripMenuItem
             // 
@@ -1171,8 +1177,9 @@
             // 
             this.注册ToolStripMenuItem.Name = "注册ToolStripMenuItem";
             this.注册ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.R)));
-            this.注册ToolStripMenuItem.Size = new System.Drawing.Size(145, 22);
+            this.注册ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.注册ToolStripMenuItem.Text = "注册";
+            this.注册ToolStripMenuItem.Click += new System.EventHandler(this.注册ToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
@@ -1192,8 +1199,9 @@
             this.联合筛选器ToolStripMenuItem.Image = global::RailwayDatabaseClient.Properties.Resources.Fliter;
             this.联合筛选器ToolStripMenuItem.Name = "联合筛选器ToolStripMenuItem";
             this.联合筛选器ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.联合筛选器ToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.联合筛选器ToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.联合筛选器ToolStripMenuItem.Text = "联合筛选器";
+            this.联合筛选器ToolStripMenuItem.Click += new System.EventHandler(this.联合筛选器ToolStripMenuItem_Click);
             // 
             // 编辑ToolStripMenuItem
             // 
@@ -1251,9 +1259,16 @@
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             this.关于ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.关于ToolStripMenuItem.Text = "关于";
             this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
+            // 
+            // 修改密码ToolStripMenuItem
+            // 
+            this.修改密码ToolStripMenuItem.Name = "修改密码ToolStripMenuItem";
+            this.修改密码ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.修改密码ToolStripMenuItem.Text = "修改密码";
+            this.修改密码ToolStripMenuItem.Click += new System.EventHandler(this.修改密码ToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -1413,6 +1428,7 @@
         private System.Windows.Forms.ToolStripMenuItem 编辑项ToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripMenuItem6;
         private System.Windows.Forms.ToolStripMenuItem 删除项ToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem 修改密码ToolStripMenuItem;
     }
 }
 

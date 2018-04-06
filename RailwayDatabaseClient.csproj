@@ -102,6 +102,12 @@
     <Compile Include="FrmAbout.Designer.cs">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFilter.Designer.cs">
+      <DependentUpon>FrmFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmLoad.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,12 @@
     <Compile Include="FrmMain.Designer.cs">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModify.designer.cs">
+      <DependentUpon>FrmModify.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmReg.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +143,9 @@
     <EmbeddedResource Include="FrmAbout.resx">
       <DependentUpon>FrmAbout.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmFilter.resx">
+      <DependentUpon>FrmFilter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmLoad.resx">
       <DependentUpon>FrmLoad.cs</DependentUpon>
     </EmbeddedResource>
@@ -139,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModify.resx">
+      <DependentUpon>FrmModify.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmReg.resx">
       <DependentUpon>FrmReg.cs</DependentUpon>

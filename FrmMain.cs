@@ -55,13 +55,55 @@ namespace RailwayDatabaseClient
 
         private void ButtFliter_Click(object sender, EventArgs e)
         {
-
+            FrmFilter FrmFliterLauncher = new FrmFilter();
+            FrmFliterLauncher.Show();
         }
 
         private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FrmAbout FrmAboutLauncher = new FrmAbout();
             FrmAboutLauncher.Show();
+        }
+
+        private void 联合筛选器ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFilter FrmFliterLauncher = new FrmFilter();
+            FrmFliterLauncher.Show();
+        }
+
+        private void StripButtLogin_Click(object sender, EventArgs e)
+        {
+            FrmLogin FrmLoginLauncher = new FrmLogin();
+            FrmLoginLauncher.Show();
+        }
+
+        private void StripButtLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StripButtNewUser_Click(object sender, EventArgs e)
+        {
+            FrmReg FrmRegLauncher = new FrmReg();
+            FrmRegLauncher.Show();
+        }
+
+        private void 修改密码ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmModify FrmModifyLauncher = new FrmModify();
+            FrmModifyLauncher.Show();
+        }
+
+        private void 登录ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLogin FrmLoginLauncher = new FrmLogin();
+            FrmLoginLauncher.Show();
+        }
+
+        private void 注册ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmReg FrmRegLauncher = new FrmReg();
+            FrmRegLauncher.Show();
         }
     }
 }
