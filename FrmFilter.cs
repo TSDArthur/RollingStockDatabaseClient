@@ -15,5 +15,10 @@ namespace RailwayDatabaseClient
         {
             InitializeComponent();
         }
+
+        private void FrmFilter_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
