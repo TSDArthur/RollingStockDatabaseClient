@@ -77,6 +77,7 @@ namespace RailwayDatabaseClient.ClassApplication
                     tempData.AttachDescibe = new List<string>();
                     tempData.AttachImageCnt = 0;
                     tempData.AttachImage = new List<string>();
+                    tempData.AttachNumber = new List<string>();
                     AppVars.initalData.Add(tempData);
                 }
             }
@@ -111,6 +112,7 @@ namespace RailwayDatabaseClient.ClassApplication
                         tempData.AttachDescibe = (reader.GetValue(2).ToString()).Split(';').ToList();
                         tempData.AttachImageCnt = (reader.GetValue(3).ToString()).Split(';').Length;
                         tempData.AttachImage = (reader.GetValue(3).ToString()).Split(';').ToList();
+                        tempData.AttachNumber= (reader.GetValue(4).ToString()).Split(';').ToList();
                         AppVars.initalData[i] = tempData;
                     }
                 }
@@ -161,7 +163,7 @@ namespace RailwayDatabaseClient.ClassApplication
             return 3;
         }
 
-        static public int RegNewUser(string userName, string passWord)
+        static public int RegNewUser(string userName, string passWord,string Email)
         {
             int VerifyExist = VerifyLogin(userName, passWord);
             if (VerifyExist == 0) return 0;
@@ -176,8 +178,8 @@ namespace RailwayDatabaseClient.ClassApplication
             string pwd = passWord, salt = AppVars.AppParas.salt;
             try
             {
-                mySql.ExeUpdate(string.Format("insert into {0}({1},{2},{3}) values('{4}','{5}',{6})", 
-                    "user", "username","password","type", userName ,MD5Manager.HashString(MD5Manager.HashString(passWord) + salt),1));
+                mySql.ExeUpdate(string.Format("insert into {0}({1},{2},{3}) values('{4}','{5}',{6},'{7}')", 
+                    "user", "username","password","type", userName ,MD5Manager.HashString(MD5Manager.HashString(passWord) + salt),1, Email));
             }
             catch (Exception ex)
             {

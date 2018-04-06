@@ -40,6 +40,7 @@
             this.Col_Type = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Length = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Weight = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Col_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Speed = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Capacity = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Date1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -47,6 +48,9 @@
             this.Col_Date3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_Date4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Col_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MenuMain = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
             this.MainMenu = new System.Windows.Forms.MenuStrip();
             this.MainToolTip = new System.Windows.Forms.ToolStrip();
             this.StripLabelLogin = new System.Windows.Forms.ToolStripLabel();
@@ -57,6 +61,8 @@
             this.MenuImageList = new System.Windows.Forms.ImageList(this.components);
             this.PanelInfo = new System.Windows.Forms.Panel();
             this.TabInfo = new System.Windows.Forms.TabControl();
+            this.Tab_Loading = new System.Windows.Forms.TabPage();
+            this.LabelTabLoding = new System.Windows.Forms.Label();
             this.Tab_Info = new System.Windows.Forms.TabPage();
             this.TxtBoxSpeed = new System.Windows.Forms.TextBox();
             this.TxtBoxDate4 = new System.Windows.Forms.TextBox();
@@ -76,24 +82,18 @@
             this.LabelBack1 = new System.Windows.Forms.Label();
             this.LabelBack0 = new System.Windows.Forms.Label();
             this.Tab_Attachment = new System.Windows.Forms.TabPage();
+            this.ListAttach = new System.Windows.Forms.ListView();
+            this.Col_Att_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Col_Att_Attachment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.MenuAttachRight = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.MenuAttachSep = new System.Windows.Forms.ToolStripSeparator();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.PanelMain = new System.Windows.Forms.Panel();
             this.ButtCancelFilter = new System.Windows.Forms.Button();
             this.ComboSearchType = new System.Windows.Forms.ComboBox();
             this.TxtBoxSearch = new System.Windows.Forms.TextBox();
             this.LabelSearch = new System.Windows.Forms.Label();
             this.LabelInfo = new System.Windows.Forms.Label();
-            this.Tab_Loading = new System.Windows.Forms.TabPage();
-            this.LabelTabLoding = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.ListAttach = new System.Windows.Forms.ListView();
-            this.Col_Att_Name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.Col_Att_Attachment = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MenuAttachRight = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.MenuAttachSep = new System.Windows.Forms.ToolStripSeparator();
-            this.Col_Count = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.MenuMain = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripSeparator();
             this.ButtSave = new System.Windows.Forms.Button();
             this.ButtEdit = new System.Windows.Forms.Button();
             this.ButtAdd = new System.Windows.Forms.Button();
@@ -145,16 +145,16 @@
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.MainStrip.SuspendLayout();
+            this.MenuMain.SuspendLayout();
             this.MainMenu.SuspendLayout();
             this.MainToolTip.SuspendLayout();
             this.PanelInfo.SuspendLayout();
             this.TabInfo.SuspendLayout();
+            this.Tab_Loading.SuspendLayout();
             this.Tab_Info.SuspendLayout();
             this.Tab_Attachment.SuspendLayout();
-            this.PanelMain.SuspendLayout();
-            this.Tab_Loading.SuspendLayout();
             this.MenuAttachRight.SuspendLayout();
-            this.MenuMain.SuspendLayout();
+            this.PanelMain.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxSearcher)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxInformation)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxInfo)).BeginInit();
@@ -241,6 +241,10 @@
             // 
             this.Col_Weight.Text = "车重";
             // 
+            // Col_Count
+            // 
+            this.Col_Count.Text = "存量";
+            // 
             // Col_Speed
             // 
             this.Col_Speed.Text = "最高时速";
@@ -274,6 +278,28 @@
             // Col_ID
             // 
             this.Col_ID.Text = "ID";
+            // 
+            // MenuMain
+            // 
+            this.MenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem5,
+            this.toolStripSeparator6,
+            this.toolStripMenuItem7,
+            this.编辑项ToolStripMenuItem,
+            this.toolStripMenuItem6,
+            this.删除项ToolStripMenuItem1});
+            this.MenuMain.Name = "MenuAttachRight";
+            this.MenuMain.Size = new System.Drawing.Size(113, 104);
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(109, 6);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(109, 6);
             // 
             // MainMenu
             // 
@@ -379,6 +405,29 @@
             this.TabInfo.SelectedIndex = 0;
             this.TabInfo.Size = new System.Drawing.Size(377, 652);
             this.TabInfo.TabIndex = 10;
+            // 
+            // Tab_Loading
+            // 
+            this.Tab_Loading.Controls.Add(this.LabelTabLoding);
+            this.Tab_Loading.ImageIndex = 5;
+            this.Tab_Loading.Location = new System.Drawing.Point(4, 4);
+            this.Tab_Loading.Name = "Tab_Loading";
+            this.Tab_Loading.Size = new System.Drawing.Size(369, 622);
+            this.Tab_Loading.TabIndex = 2;
+            this.Tab_Loading.Text = "相关信息";
+            this.Tab_Loading.UseVisualStyleBackColor = true;
+            // 
+            // LabelTabLoding
+            // 
+            this.LabelTabLoding.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.LabelTabLoding.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.LabelTabLoding.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.LabelTabLoding.Location = new System.Drawing.Point(0, 0);
+            this.LabelTabLoding.Name = "LabelTabLoding";
+            this.LabelTabLoding.Size = new System.Drawing.Size(369, 622);
+            this.LabelTabLoding.TabIndex = 18;
+            this.LabelTabLoding.Text = "无显示内容";
+            this.LabelTabLoding.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Tab_Info
             // 
@@ -592,6 +641,58 @@
             this.Tab_Attachment.Text = "配属情况";
             this.Tab_Attachment.UseVisualStyleBackColor = true;
             // 
+            // ListAttach
+            // 
+            this.ListAttach.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Col_Att_Name,
+            this.Col_Att_Attachment});
+            this.ListAttach.ContextMenuStrip = this.MenuAttachRight;
+            this.ListAttach.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ListAttach.Location = new System.Drawing.Point(0, 301);
+            this.ListAttach.MultiSelect = false;
+            this.ListAttach.Name = "ListAttach";
+            this.ListAttach.Size = new System.Drawing.Size(368, 320);
+            this.ListAttach.TabIndex = 18;
+            this.ListAttach.UseCompatibleStateImageBehavior = false;
+            this.ListAttach.View = System.Windows.Forms.View.Details;
+            // 
+            // Col_Att_Name
+            // 
+            this.Col_Att_Name.Text = "编号";
+            this.Col_Att_Name.Width = 80;
+            // 
+            // Col_Att_Attachment
+            // 
+            this.Col_Att_Attachment.Text = "配属单位";
+            this.Col_Att_Attachment.Width = 100;
+            // 
+            // MenuAttachRight
+            // 
+            this.MenuAttachRight.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.MenuAttachAdd,
+            this.MenuAttachEdit,
+            this.MenuAttachSep,
+            this.MenuAttachDel});
+            this.MenuAttachRight.Name = "MenuAttachRight";
+            this.MenuAttachRight.Size = new System.Drawing.Size(125, 76);
+            // 
+            // MenuAttachSep
+            // 
+            this.MenuAttachSep.Name = "MenuAttachSep";
+            this.MenuAttachSep.Size = new System.Drawing.Size(121, 6);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
+            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.richTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.richTextBox1.Location = new System.Drawing.Point(0, 214);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.ReadOnly = true;
+            this.richTextBox1.Size = new System.Drawing.Size(368, 85);
+            this.richTextBox1.TabIndex = 16;
+            this.richTextBox1.Text = "无相关信息...";
+            // 
             // PanelMain
             // 
             this.PanelMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -695,107 +796,6 @@
             this.LabelInfo.TabIndex = 7;
             this.LabelInfo.Text = "相关信息";
             this.LabelInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // Tab_Loading
-            // 
-            this.Tab_Loading.Controls.Add(this.LabelTabLoding);
-            this.Tab_Loading.ImageIndex = 5;
-            this.Tab_Loading.Location = new System.Drawing.Point(4, 4);
-            this.Tab_Loading.Name = "Tab_Loading";
-            this.Tab_Loading.Size = new System.Drawing.Size(369, 622);
-            this.Tab_Loading.TabIndex = 2;
-            this.Tab_Loading.Text = "相关信息";
-            this.Tab_Loading.UseVisualStyleBackColor = true;
-            // 
-            // LabelTabLoding
-            // 
-            this.LabelTabLoding.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.LabelTabLoding.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.LabelTabLoding.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.LabelTabLoding.Location = new System.Drawing.Point(0, 0);
-            this.LabelTabLoding.Name = "LabelTabLoding";
-            this.LabelTabLoding.Size = new System.Drawing.Size(369, 622);
-            this.LabelTabLoding.TabIndex = 18;
-            this.LabelTabLoding.Text = "无显示内容";
-            this.LabelTabLoding.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // richTextBox1
-            // 
-            this.richTextBox1.BackColor = System.Drawing.SystemColors.Control;
-            this.richTextBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.richTextBox1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.richTextBox1.Location = new System.Drawing.Point(0, 214);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.ReadOnly = true;
-            this.richTextBox1.Size = new System.Drawing.Size(368, 85);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "无相关信息...";
-            // 
-            // ListAttach
-            // 
-            this.ListAttach.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Col_Att_Name,
-            this.Col_Att_Attachment});
-            this.ListAttach.ContextMenuStrip = this.MenuAttachRight;
-            this.ListAttach.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ListAttach.Location = new System.Drawing.Point(0, 301);
-            this.ListAttach.MultiSelect = false;
-            this.ListAttach.Name = "ListAttach";
-            this.ListAttach.Size = new System.Drawing.Size(368, 320);
-            this.ListAttach.TabIndex = 18;
-            this.ListAttach.UseCompatibleStateImageBehavior = false;
-            this.ListAttach.View = System.Windows.Forms.View.Details;
-            // 
-            // Col_Att_Name
-            // 
-            this.Col_Att_Name.Text = "编号";
-            this.Col_Att_Name.Width = 80;
-            // 
-            // Col_Att_Attachment
-            // 
-            this.Col_Att_Attachment.Text = "配属单位";
-            this.Col_Att_Attachment.Width = 100;
-            // 
-            // MenuAttachRight
-            // 
-            this.MenuAttachRight.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.MenuAttachAdd,
-            this.MenuAttachEdit,
-            this.MenuAttachSep,
-            this.MenuAttachDel});
-            this.MenuAttachRight.Name = "MenuAttachRight";
-            this.MenuAttachRight.Size = new System.Drawing.Size(125, 76);
-            // 
-            // MenuAttachSep
-            // 
-            this.MenuAttachSep.Name = "MenuAttachSep";
-            this.MenuAttachSep.Size = new System.Drawing.Size(121, 6);
-            // 
-            // Col_Count
-            // 
-            this.Col_Count.Text = "存量";
-            // 
-            // MenuMain
-            // 
-            this.MenuMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem5,
-            this.toolStripSeparator6,
-            this.toolStripMenuItem7,
-            this.编辑项ToolStripMenuItem,
-            this.toolStripMenuItem6,
-            this.删除项ToolStripMenuItem1});
-            this.MenuMain.Name = "MenuAttachRight";
-            this.MenuMain.Size = new System.Drawing.Size(113, 104);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(109, 6);
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(109, 6);
             // 
             // ButtSave
             // 
@@ -1251,8 +1251,9 @@
             // 
             this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
             this.关于ToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.I)));
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.关于ToolStripMenuItem.Text = "关于";
+            this.关于ToolStripMenuItem.Click += new System.EventHandler(this.关于ToolStripMenuItem_Click);
             // 
             // FrmMain
             // 
@@ -1274,20 +1275,20 @@
             this.Text = "轨道车辆型号库系统（0.1c)";
             this.MainStrip.ResumeLayout(false);
             this.MainStrip.PerformLayout();
+            this.MenuMain.ResumeLayout(false);
             this.MainMenu.ResumeLayout(false);
             this.MainMenu.PerformLayout();
             this.MainToolTip.ResumeLayout(false);
             this.MainToolTip.PerformLayout();
             this.PanelInfo.ResumeLayout(false);
             this.TabInfo.ResumeLayout(false);
+            this.Tab_Loading.ResumeLayout(false);
             this.Tab_Info.ResumeLayout(false);
             this.Tab_Info.PerformLayout();
             this.Tab_Attachment.ResumeLayout(false);
+            this.MenuAttachRight.ResumeLayout(false);
             this.PanelMain.ResumeLayout(false);
             this.PanelMain.PerformLayout();
-            this.Tab_Loading.ResumeLayout(false);
-            this.MenuAttachRight.ResumeLayout(false);
-            this.MenuMain.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxSearcher)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxInformation)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicBoxInfo)).EndInit();

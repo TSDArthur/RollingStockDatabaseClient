@@ -57,5 +57,11 @@ namespace RailwayDatabaseClient
         {
 
         }
+
+        private void 关于ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmAbout FrmAboutLauncher = new FrmAbout();
+            FrmAboutLauncher.Show();
+        }
     }
 }

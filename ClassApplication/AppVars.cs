@@ -50,6 +50,7 @@ namespace RailwayDatabaseClient.ClassApplication
             public List<string> AttachDescibe;
             public int AttachImageCnt;
             public List<string> AttachImage;
+            public List<string> AttachNumber;
         }
 
         public struct Filter
